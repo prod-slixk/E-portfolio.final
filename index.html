@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jay's Frontend Developer Portfolio - Building responsive & performant web applications with a unique hacker aesthetic.">
+    <meta name="keywords" content="frontend developer, web developer, portfolio, HTML, CSS, JavaScript, React, Vue">
+    <meta name="author" content="Jay">
+    <meta name="theme-color" content="#000000">
+    <title>JAY_PORTFOLIO // SLIXK CORPORATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700;900&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Scanline Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo glitch" data-text="[SLIXK CORPORATION]">
+                <span class="logo-bracket">[</span>SLIXK CORPORATION<span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+            </div>
+            <button class="contact-nav-btn" id="navContactBtn">
+                <span class="btn-glitch" data-text="CONTACT">CONTACT</span>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">ABOUT</a>
+        <a href="#skills" class="mobile-link">SKILLS</a>
+        <a href="#projects" class="mobile-link">PROJECTS</a>
+        <button class="contact-nav-btn mobile-contact-btn" id="mobileContactBtn">
+            <span>CONTACT</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <!-- ASCII Skull Art -->
+            <div class="ascii-art" aria-hidden="true">
+<pre>
+    ██████╗ ███████╗██████╗ ███████╗███████╗ ██████╗
+    ██╔══██╗██╔════╝██╔══██╗██╔════╝██╔════╝██╔════╝
+    ██║  ██║█████╗  ██║  ██║███████╗█████╗  ██║     
+    ██║  ██║██╔══╝  ██║  ██║╚════██║██╔══╝  ██║     
+    ██████╔╝███████╗██████╔╝███████║███████╗╚██████╗
+    ╚═════╝ ╚══════╝╚═════╝ ╚══════╝╚══════╝ ╚═════╝
+</pre>
+            </div>
+            
+            <div class="hero-text">
+                <p class="hero-subtitle terminal-text">
+                    <span class="terminal-prompt">&gt;</span> INITIALIZING_PROFILE...
+                </p>
+                <h1 class="hero-title glitch-intense" data-text="I'M JAY">I'M JAY</h1>
+                <p class="hero-role">
+                    <span class="bracket">{</span>
+                    <span class="role-text typed-text"></span>
+                    <span class="cursor">_</span>
+                    <span class="bracket">}</span>
+                </p>
+                <p class="hero-desc">
+                    Building responsive & performant web applications.<br>
+                    <span class="highlight">Hacking</span> the future, one line of code at a time.
+                </p>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span class="btn-text">VIEW_PROJECTS</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <span class="btn-text">LEARN_MORE</span>
+                </a>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="hero-decoration">
+                <div class="corner-bracket top-left">[</div>
+                <div class="corner-bracket top-right">]</div>
+                <div class="corner-bracket bottom-left">[</div>
+                <div class="corner-bracket bottom-right">]</div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">SCROLL_DOWN</span>
+            <div class="scroll-arrow">▼</div>
+        </div>
+
+        <!-- Hacker System Alert Popup -->
+        <div class="hacker-popup" id="hackerPopup">
+            <div class="popup-titlebar">
+                <span class="popup-title">DEDSEC_ALERT.exe</span>
+                <button class="popup-close" id="popupClose">×</button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-icon">⚠</div>
+                <p class="popup-message" id="popupMessage">SYSTEM BREACH DETECTED...</p>
+            </div>
+            <div class="popup-buttons">
+                <button class="popup-btn" id="popupBtn1">#WTF</button>
+                <button class="popup-btn" id="popupBtn2">ACCEPT</button>
+                <button class="popup-btn" id="popupBtn3">IGNORE</button>
+            </div>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="contact-card" id="contactCard">
+            <div class="contact-card-decoration">
+                <span class="deco-line"></span>
+                <span class="deco-dot"></span>
+            </div>
+            <p class="contact-quote">"Everything is connected"</p>
+            <button class="contact-btn" id="openModal">
+                <span class="contact-btn-text">GET_IN_TOUCH</span>
+                <span class="contact-btn-icon">→</span>
+            </button>
+        </div>
+
+        <!-- Hacker Terminal -->
+        <div class="hacker-terminal" id="hackerTerminal">
+            <div class="terminal-bar">
+                <div class="terminal-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">root@dedsec:~</span>
+            </div>
+            <div class="terminal-screen">
+                <p class="terminal-line" id="terminalLine"><span class="terminal-prompt">$</span> <span class="terminal-typed"></span><span class="terminal-cursor">█</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;ABOUT&gt;</span>
+                <h2 class="section-title glitch" data-text="WHO_AM_I">WHO_AM_I</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn red"></span>
+                            <span class="terminal-btn yellow"></span>
+                            <span class="terminal-btn green"></span>
+                        </div>
+                        <span class="terminal-title">jay@portfolio:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> cat about.txt</p>
+                        <p class="terminal-output">
+                            > NAME: Jay<br>
+                            > ROLE: Frontend Developer<br>
+                            > STATUS: Currently enrolled in Frontend Simplified Bootcamp<br>
+                            > MISSION: Building clean, responsive, user-focused web experiences<br>
+                            > INTERESTS: AI Development, Web Design, Audio Production
+                        </p>
+                        <p><span class="prompt">$</span> echo $PHILOSOPHY</p>
+                        <p class="terminal-output highlight">> "Code is art. Design is communication. Together, they change the world."</p>
+                        <p><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">⚡</span>
+                        <span class="stat-number" data-count="4">0</span>
+                        <span class="stat-label">PROJECTS_COMPLETED</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">📚</span>
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">HOURS_CODING</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">☕</span>
+                        <span class="stat-number" data-count="999">0</span>
+                        <span class="stat-label">CUPS_OF_COFFEE</span>
+                    </div>
+                </div>
+            </div>
+            
+            <span class="section-tag section-tag-close">&lt;/ABOUT&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;SKILLS&gt;</span>
+                <h2 class="section-title glitch" data-text="TECH_STACK">TECH_STACK</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="HTML">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 128 128">
+                            <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                            <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+                            <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+                            <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <span class="skill-level">90%</span>
+                </div>
+
+                <div class="skill-card" data-skill="CSS">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 128 128">
+                            <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543z"></path>
+                            <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16z"></path>
+                            <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95z"></path>
+                            <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018z"></path>
+                            <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881z"></path>
+                            <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711zm-.047 27.994v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <span class="skill-level">85%</span>
+                </div>
+
+                <div class="skill-card" data-skill="JS">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 128 128">
+                            <path fill="#F7DF1E" d="M1.408 1.408h125.184v125.184H1.408z"></path>
+                            <path fill="#000" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">JAVASCRIPT</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <span class="skill-level">75%</span>
+                </div>
+
+                <div class="skill-card" data-skill="React">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 128 128">
+                            <g fill="#61DAFB">
+                                <circle cx="64" cy="64" r="11.4"></circle>
+                                <path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">REACT</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="60"></div>
+                    </div>
+                    <span class="skill-level">60%</span>
+                </div>
+
+                <div class="skill-card" data-skill="TypeScript">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 128 128">
+                            <rect fill="#007acc" width="128" height="128"/>
+                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="bold">TS</text>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">TYPESCRIPT</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="50"></div>
+                    </div>
+                    <span class="skill-level">50%</span>
+                </div>
+
+                <div class="skill-card" data-skill="Vue">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 128 128">
+                            <path fill="#42b883" d="M78.8 10L64 35.4 49.2 10H0l64 110 64-110z"></path>
+                            <path fill="#35495e" d="M78.8 10L64 35.4 49.2 10H25.6L64 76 102.4 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">VUE</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="45"></div>
+                    </div>
+                    <span class="skill-level">45%</span>
+                </div>
+            </div>
+
+            <span class="section-tag section-tag-close">&lt;/SKILLS&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;PROJECTS&gt;</span>
+                <h2 class="section-title glitch" data-text="MY_WORK">MY_WORK</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: DevGuide -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-status">FEATURED</span>
+                        </div>
+                        <img src="assets/devguide-mockup.png" alt="DevGuide - Frontend Development Study Guide" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">DEVGUIDE</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/prod-slixk/Devtools-frontend-study.guide.io" class="project-link" title="View Code" target="_blank" rel="noopener noreferrer">
+                                    <span>{ }</span>
+                                </a>
+                                <a href="https://prod-slixk.github.io/Devtools-frontend-study.guide.io/" class="project-link" title="Live Demo" target="_blank" rel="noopener noreferrer">
+                                    <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            A Netflix-inspired study guide for frontend development. Features dark/light mode, 
+                            collapsible code blocks, copy-to-clipboard, and responsive design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JAVASCRIPT</span>
+                        </div>
+                    </div>
+                    <div class="project-glitch-line"></div>
+                </article>
+
+                <!-- Project 2: Treact -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/treact-mockup.png" alt="Treact - React Landing Page Template" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">TREACT</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/prod-slixk/treact-project.landingPage" class="project-link" title="View Code" target="_blank" rel="noopener noreferrer">
+                                    <span>{ }</span>
+                                </a>
+                                <a href="https://prod-slixk.github.io/treact-project.landingPage/" class="project-link" title="Live Demo" target="_blank" rel="noopener noreferrer">
+                                    <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Responsive landing page with custom testimonial slider. 
+                            Built with attention to modern design principles.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JAVASCRIPT</span>
+                        </div>
+                    </div>
+                    <div class="project-glitch-line"></div>
+                </article>
+
+                <!-- Project 3: Coming Soon -->
+                <article class="project-card coming-soon">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="placeholder-icon">🚧</span>
+                            <span class="placeholder-text">LOADING...</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">NEXT_PROJECT</h3>
+                        </div>
+                        <p class="project-description">
+                            Currently in development. Stay tuned for more projects...
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">???</span>
+                        </div>
+                    </div>
+                    <div class="project-glitch-line"></div>
+                </article>
+            </div>
+
+            <span class="section-tag section-tag-close">&lt;/PROJECTS&gt;</span>
+        </div>
+    </section>
+
+    <!-- Fixed Contact Card -->
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">×</button>
+            
+            <div class="modal-header">
+                <div class="modal-decoration">[[ SECURE_CONNECTION ]]</div>
+                <h2 class="modal-title glitch" data-text="CONTACT_ME">CONTACT_ME</h2>
+                <p class="modal-subtitle">> Establishing connection...</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">&gt; NAME_</label>
+                    <input type="text" class="form-input" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">&gt; EMAIL_</label>
+                    <input type="email" class="form-input" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">&gt; MESSAGE_</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="What's on your mind?" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">
+                    <span class="submit-text">SEND_MESSAGE</span>
+                    <span class="submit-icon">⚡</span>
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3 class="success-title">MESSAGE_SENT</h3>
+                <p class="success-text">> Connection established. I'll respond soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-glitch-bar"></div>
+            <p class="footer-text">
+                <span class="footer-bracket">[</span>
+                DESIGNED & BUILT BY JAY // 2025
+                <span class="footer-bracket">]</span>
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/prod-slixk" class="footer-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/github.png" alt="GitHub" class="footer-icon">
+                </a>
+                <a href="https://www.tiktok.com/@prod.slixk2x" class="footer-link" title="TikTok" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/tiktok.png" alt="TikTok" class="footer-icon">
+                </a>
+            </div>
+            <div class="footer-ascii">
+                <pre>
+ ██╗ █████╗ ██╗   ██╗
+ ██║██╔══██╗╚██╗ ██╔╝
+ ██║███████║ ╚████╔╝ 
+██ ██║██╔══██║  ╚██╔╝  
+╚█████║██║  ██║   ██║   
+ ╚════╝╚═╝  ╚═╝   ╚═╝   
+                </pre>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
